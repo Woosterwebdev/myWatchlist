@@ -1,3 +1,10 @@
+/* 
+movie body text color #A5A5A5
+unpopulated color pre search #2E2E2F
+    empty list/failed search #787878
+background #787878
+*/
+
 *,
 *::before,
 *::after {
@@ -8,4 +15,222 @@ html,
 body {
     margin: 0;
     padding: 0;
+    background: #121212;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+/* Flex containers */
+
+header,
+div.title,
+#search-bar,
+#search-results,
+div.movie-container,
+.details1,
+.details2,
+#my-watchlist {
+    display: flex;
+}
+
+/* Header */
+
+header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+div.title {
+    background: url('images/header-img.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 0 2px #000;
+    height: 12.5em;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.675rem;
+    font-weight: 900;
+}
+
+a.page-link{
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.875rem;
+    font-weight: 800;
+}
+
+#search-bar {
+    justify-content: center;
+    margin-top: -0.75em;
+    width: 80%;
+    max-width: 460px;
+}
+
+#search-input {
+    background: url('images/magnifying-glass-solid.svg') no-repeat #2E2E2F 4px 7px;
+    background-size: 1.25em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    caret-color: #A5A5A5;
+    color: #A5A5A5;
+    padding: 0.5em;
+    padding-left: 1.85em;
+    line-height: 1.25em;
+    width: 100%;
+}
+
+#search-btn {
+    background: #4B4B4B;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.875em;
+    padding: 0 2em;
+}
+
+/* Search results initial state */
+
+div.initial-state {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #787878;
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.fa-film {
+    font-size: 70px;
+}
+
+/* Search results populated */
+
+div.populated-results {
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 90%;
+}
+
+div.movie-container {
+    height: 300px;
+    align-items: center;
+}
+
+.movie-container p {
+    margin: 0.4em 0;
+}
+
+.poster {
+    margin-right: 1em;
+    height: 40%;
+}
+
+.details1 {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.movie-title {
+    font-size: 1.125rem;
+}
+
+.details2 {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.55em;
+    font-size: 0.75rem;
+}
+
+.fa-circle-plus {
+    margin-right: 0.3em;
+}
+
+.details3 {
+    font-size: 0.875rem;
+    color: #A5A5A5;
+}
+
+hr {
+    width: 95%;
+    background-color: #2C2C2C;
+    border-color: #2C2C2C;
+    color: #2C2C2C;
+}
+
+/* Search results no data state */
+
+.no-data-state {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    color: #787878;
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.no-data-state p {
+    width: 75%;
+}
+
+/* My Watchlist initial state */
+
+#my-watchlist {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #787878;
+    font-size: 1.125rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.empty-list {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+a.to-search {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/* Media querries */
+
+@media (min-width: 400px) {
+    .poster {
+        height: 50%;
+    }
+}
+
+@media (min-width: 500px) {
+    div.title {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    div.movie-container {
+        gap: 0.5em;
+    }
+
+    .movie-container p {
+        margin: 0.8em 0;
+    }
+
+    .poster {
+        height: 90%;
+    }
 }
