@@ -1,5 +1,7 @@
 My Watchlist list is a multi page design from Scrimba Frontend Developer Career Path Module 8. It utilizes the OMDb API. The OMDb API docs can be found at the link below. The Figma file can be found at the link below.
 
+https://mywatchlist-351329.netlify.app/
+
 OMDb API
 https://www.omdbapi.com/
 
