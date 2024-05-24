@@ -22,11 +22,11 @@ if (watchlistFromLS) {
 
 searchBtnEl.addEventListener('click', () => fetchResults())
 
-searchInputEl.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    fetchResults()
-  }
-})
+// searchInputEl.addEventListener('keypress', (e) => {
+//   if (e.key === 'Enter') {
+//     fetchResults()
+//   }
+// })
 
 /* -------------------*/
 /* Add event listener */
