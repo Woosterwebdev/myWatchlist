@@ -1,4 +1,4 @@
-const baseUrl = 'http://www.omdbapi.com/'
+const baseUrl = 'https://www.omdbapi.com/'
 const apiKey = '453ca794'
 const searchBtnEl = document.getElementById('search-btn')
 const searchInputEl = document.getElementById('search-input')
@@ -22,11 +22,11 @@ if (watchlistFromLS) {
 
 searchBtnEl.addEventListener('click', () => fetchResults())
 
-// searchInputEl.addEventListener('keypress', (e) => {
-//   if (e.key === 'Enter') {
-//     fetchResults()
-//   }
-// })
+searchInputEl.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    fetchResults()
+  }
+})
 
 /* -------------------*/
 /* Add event listener */
